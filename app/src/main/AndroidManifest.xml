@@ -4,12 +4,10 @@
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher_round"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:label="ColorOS Tool"
         tools:targetApi="31" >
 
         <!-- 是否为Xposed模块 -->
@@ -19,7 +17,7 @@
         <!-- 模块的简介（在框架中显示） -->
         <meta-data
             android:name="xposeddescription"
-            android:value="我是Xposed模块简介" />
+            android:value="1+13 coloros15 去除安装前风险扫描\n-适配应用安装器-4.14.91" />
         <!-- 模块最低支持的Api版本 一般填54即可 -->
         <meta-data
             android:name="xposedminversion"
@@ -28,6 +26,14 @@
         <meta-data
             android:name="xposedscope"
             android:resource="@array/xposedscope"/>
+
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
