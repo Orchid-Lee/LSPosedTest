@@ -7,7 +7,7 @@
         android:icon="@mipmap/ic_launcher_round"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:label="ColorOS Tool"
+        android:label="InstallPatch"
         tools:targetApi="31" >
 
         <!-- 是否为Xposed模块 -->
@@ -17,7 +17,7 @@
         <!-- 模块的简介（在框架中显示） -->
         <meta-data
             android:name="xposeddescription"
-            android:value="1+13 coloros15 去除安装前风险扫描\n-适配应用安装器-4.14.91" />
+            android:value="1加13去除安装前风险扫描\n --适配应用安装器v.4.14.91" />
         <!-- 模块最低支持的Api版本 一般填54即可 -->
         <meta-data
             android:name="xposedminversion"

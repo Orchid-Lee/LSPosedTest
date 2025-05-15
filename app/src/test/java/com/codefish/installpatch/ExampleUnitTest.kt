@@ -1,4 +1,4 @@
-package com.codefish.lsposedtest
+package com.codefish.installpatch
 
 import org.junit.Test
 

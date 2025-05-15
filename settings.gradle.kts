@@ -23,6 +23,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "LSPosedTest"
+rootProject.name = "InstallPatch"
 include(":app")
  
