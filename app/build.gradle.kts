@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.codefish.lsposedtest"
+    namespace = "com.codefish.installpatch"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.codefish.lsposedtest"
+        applicationId = "com.codefish.installpatch"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -52,5 +52,4 @@ android {
 
 dependencies {
     compileOnly(libs.api)
-    compileOnly (libs.api)
 }

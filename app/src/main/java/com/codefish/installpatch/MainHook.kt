@@ -1,4 +1,4 @@
-package com.codefish.lsposedtest
+package com.codefish.installpatch
 
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.XC_MethodHook
