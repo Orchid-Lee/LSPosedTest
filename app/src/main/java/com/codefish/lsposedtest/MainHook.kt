@@ -2,6 +2,7 @@ package com.codefish.lsposedtest
 
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.XC_MethodHook
+import de.robv.android.xposed.XC_MethodReplacement
 import de.robv.android.xposed.XposedBridge
 import de.robv.android.xposed.XposedHelpers
 import de.robv.android.xposed.callbacks.XC_LoadPackage
@@ -9,6 +10,12 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage
 class MainHook : IXposedHookLoadPackage {
 
     override fun handleLoadPackage(lpparam: XC_LoadPackage.LoadPackageParam) {
+
+        //检测是否激活
+        if(lpparam.packageName.equals("com.codefish.lsposedtest")){
+            XposedHelpers.findAndHookMethod("com.codefish.lsposedtest.MainActivity", lpparam.classLoader, "isModuleActive", XC_MethodReplacement.returnConstant(true))
+        }
+
         //去除频繁安装校验
         var targetMethod = XposedHelpers.findMethodExact(
             XposedHelpers.findClass(
